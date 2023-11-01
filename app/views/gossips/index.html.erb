@@ -1,0 +1,30 @@
+<div class="hero-color px-4 py-5 mb-5 text-center">
+  <h1 class="display-5 fw-bold"><em>Last Gossip</em></h1>
+  <div class="col-lg-6 mx-auto">
+    <blockquote class="blockquote lead mb-4">
+      <br>
+      <p><%= @gossips.last.content %></p>
+      <br>
+      <footer class="blockquote-footer txt-white"><%= @gossips.last.user.first_name %> <%= @gossips.last.user.last_name %></footer>
+    </blockquote>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <%= link_to "Share a Gossip", new_gossip_path, class:"btn btn_white px-4 gap-3"%>
+    </div>
+  </div>
+</div>
+
+<div class="row px-4 py-2">
+  <% @gossips.each do |gossip|%> 
+    <div class="col-sm-4 my-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= gossip.title %></h5>
+          <p class="card-text">Author: <%= gossip.user.first_name %></p>
+          <div class="text-end">
+            <%= link_to "See More", gossip_path(gossip.id), class:"btn btn-pink"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

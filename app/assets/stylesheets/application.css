@@ -1,0 +1,46 @@
+.nav-color {
+  background-color: #1e1a45;
+}
+
+.hero-color {
+  background: linear-gradient(to bottom, #f1c3ce, #d66e94);
+  color: #feffff;
+}
+
+.btn_white {
+  background-color: #feffff;
+  color: #000000;
+}
+
+.btn-pink {
+  background-color: #feffff;
+  color: #000000;
+  border: none;
+  box-shadow: 0 0 0 3px #ff007f; /* Couleur rose fluo pour la bordure */
+}
+
+.btn-full-pink {
+  background-color: #ff007f;
+  color: #feffff;
+  border: none;
+  box-shadow: 0 0 0 3px #ff007f; /* Couleur rose fluo pour la bordure */
+}
+
+.gossip_card_border {
+  border: none;
+}
+
+.txt-white {
+  color: #feffff;
+}
+
+.custom-alerts {
+  position: fixed;
+  top: 10ch;
+  right: 10ch;
+  z-index: 9999;
+}
+
+.custom-alerts {
+  display: block;
+}

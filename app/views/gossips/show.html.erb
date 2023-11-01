@@ -1,0 +1,25 @@
+<div class="row px-4 py-2 ">
+  <div class="col-sm-4 my-4">
+    <div class="card gossip_card_border">
+      <div class="card-body">
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 my-4">
+    <div class="card gossip_card_border">
+      <div class="card-body">
+        <h5 class="card-title"><%= @gossip.title %></h5>
+        <p class="card-text">Content: <%= @gossip.content %></p>
+        <div>Author: <%= link_to @gossip.user.first_name, user_path(@gossip.user.id), class:"card-text"%></div>
+        <p class="card-text"><small class="text-muted">Created at: <%= @gossip.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 my-4">
+    <div class="card gossip_card_border">
+      <div class="card-body">
+      </div>
+    </div>
+  </div>
+</div>
+
