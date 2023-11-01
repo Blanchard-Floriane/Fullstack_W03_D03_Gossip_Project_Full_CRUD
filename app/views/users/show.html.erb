@@ -1,10 +1,4 @@
-<div class="row px-4 py-2 ">
-  <div class="col-sm-4 my-4">
-    <div class="card gossip_card_border">
-      <div class="card-body">
-      </div>
-    </div>
-  </div>
+<div class="row px-4 py-2 justify-content-center">
   <div class="col-sm-4 my-4">
     <div class="card gossip_card_border">
       <div class="card-body">
@@ -14,12 +8,7 @@
         <p class="card-text">Description: <%= @user.description %></p>
         <p class="card-text">Email: <%= @user.email %></p>
         <p class="card-text">Age: <%= @user.age %> years old</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 my-4">
-    <div class="card gossip_card_border">
-      <div class="card-body">
+        <p class="card-text">City: <%= link_to @user.city.name, city_path(@user.city.id) %></p>
       </div>
     </div>
   </div>

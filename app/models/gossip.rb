@@ -5,6 +5,6 @@ class Gossip < ApplicationRecord
 
   validates :title, 
     presence: true, 
-    length: { in: 3..25 }
+    length: { in: 3..70 }
   validates :content, presence: true
 end

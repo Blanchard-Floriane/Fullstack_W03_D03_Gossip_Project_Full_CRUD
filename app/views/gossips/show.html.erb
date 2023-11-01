@@ -1,25 +1,20 @@
-<div class="row px-4 py-2 ">
-  <div class="col-sm-4 my-4">
-    <div class="card gossip_card_border">
-      <div class="card-body">
+<div class="px-4 py-5 mb-5 justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-sm-4 my-4">
+      <div class="card gossip_card_border">
+        <div class="card-body">
+          <h5 class="card-title"><%= @gossip.title %></h5>
+          <br>
+          <p class="card-text">Content:</p>
+          <p class="card-text"><%= @gossip.content %></p>
+          <div>Author: <%= link_to @gossip.user.first_name, user_path(@gossip.user.id), class:"card-text"%></div>
+          <div>City: <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id), class:"card-text"%></div>
+          
+          <p class="card-text"><small class="text-muted">Created at: <%= @gossip.created_at %></small></p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-4 my-4">
-    <div class="card gossip_card_border">
-      <div class="card-body">
-        <h5 class="card-title"><%= @gossip.title %></h5>
-        <p class="card-text">Content: <%= @gossip.content %></p>
-        <div>Author: <%= link_to @gossip.user.first_name, user_path(@gossip.user.id), class:"card-text"%></div>
-        <p class="card-text"><small class="text-muted">Created at: <%= @gossip.created_at %></small></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 my-4">
-    <div class="card gossip_card_border">
-      <div class="card-body">
-      </div>
-    </div>
+
   </div>
 </div>
 

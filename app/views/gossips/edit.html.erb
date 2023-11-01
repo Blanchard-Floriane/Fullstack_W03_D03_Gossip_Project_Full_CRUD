@@ -1,0 +1,32 @@
+<div class="px-4 py-5 mb-5 text-center">
+  <h6 class="display-6 fw-bold"><em>Share Your Gossip XOXO</em></h6>
+  <br>
+
+  <div class="col-lg-6 mx-auto">
+
+    <%= form_for @gossip do |f| %>
+      <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+
+      <div class="form-floating mb-3">
+        <h4><%= f.label 'floatingTitle', 'Title' %></h4>
+        <p><small class="text-muted"><em>Your title should be between 3 and 70 characters</em></small></p>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+
+      <br />
+
+      <div class="form-floating mb-3">
+        <h4><%= f.label 'floatingTitle', 'Your Gossip Content' %></h4>
+        <p><small class="text-muted"><em>Shhhhh... We won't tell</em></small></p>
+        <%= f.text_area :content, class: "form-control" %>
+      </div>
+
+      <br />
+      
+      <div class="form-floating mb-3">
+        <%= f.submit "Gossip update", class: "btn btn-full-pink"  %>
+      </div>
+    <% end %>
+    
+  </div>
+</div>

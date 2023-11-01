@@ -25,39 +25,11 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body data-turbo="false">
-    <!--Header contain only my navbar-->
-    <header class="nav-color fw-light lh-base">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <%= link_to "The Gossip Project", root_path, class:"navbar-brand"%>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <%= link_to "Home", root_path, class:"nav-link active"%>
-              </li>
-              <li class="nav-item">
-                <%= link_to "New Gossip", new_gossip_path, class:"nav-link"%>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Connexion", root_path, class:"nav-link"%>
-              </li>
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More infos</a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Team", team_path, class:"dropdown-item"%></li>
-                <li><%= link_to "Contact", contact_path, class:"dropdown-item"%></li>
-              </ul>
-            </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+  <body data-turbo="false" class="custom-body">
 
+    <header class="nav-custom fw-light lh-base">
+      <%= render 'layouts/navbar' %> <!-- Inclure la barre de navigation ici -->
+    </header>
 
     <!-- Code HTML pour afficher les messages flash -->
     <div class="custom-alerts">
@@ -72,10 +44,12 @@
       <% end %>
     </div>
 
-
     <!--Yield is all my page content-->
     <%= yield %>
 
-
+    <!-- footer général -->
+    <footer class="footer custom-footer">
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

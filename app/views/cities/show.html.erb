@@ -1,0 +1,25 @@
+<div class="px-4 pt-5 pb-2 mb-2 text-center">
+  <h1 class="display-5 fw-bold"><em><%= @city.name %></em></h1>
+  <br>
+  <div class="col-lg-6 mx-auto">
+    <p class="text-secondary font-italic">Have you evere heard 'What's going on in Vegas, stay in Vegas?', this is the same here... So enjoy Gossip from <%= @city.name %>, but keep them for yourself!</p>
+  </div>
+</div>
+
+<div class="row px-4 py-2">
+  <% @gossips.each do |gossip|%> 
+    <div class="col-sm-4 my-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= gossip.title %></h5>
+          <p class="card-text">Author: <%= gossip.user.first_name %></p>
+          <div class="row">
+            <div class="text-end">
+              <%= link_to "See More", gossip_path(gossip), class:"btn btn-pink me-2" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
